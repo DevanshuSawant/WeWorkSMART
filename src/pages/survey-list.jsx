@@ -1,9 +1,10 @@
-import Navbar from "../components/Navbar.jsx";
+import Navbar from "../components/navbar.jsx";
 import { Breadcrumbs, Typography } from "@mui/material";
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 import { Paper } from '@mui/material';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
+import Footer from "../components/footer.jsx";
 
 
 const columns = [
@@ -42,7 +43,7 @@ function SurveyList() {
       <Navbar />
       <Breadcrumbs aria-label="breadcrumb" className="breadcrumb" separator=">" height="16px" color="#B8B6B6">
         <Link to="/" color="inherit" className="breadcrumb-back" style={{ textDecoration: 'none' }} >
-          <img src="/home-icon.svg" alt="Home" width="24" height="21"/> <h6 className="breadcrumb-previous">&nbsp;&nbsp;Home</h6>
+            <img src="/home-icon.svg" alt="Home" width="24" height="21"/> <h6 className="breadcrumb-previous">&nbsp;&nbsp;Home</h6>
         </Link>
         <h6 className="breadcrumb-current">List Of Surveys</h6>
       </Breadcrumbs>
@@ -63,6 +64,7 @@ function SurveyList() {
           </Paper>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

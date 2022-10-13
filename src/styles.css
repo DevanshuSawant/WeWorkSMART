@@ -15,6 +15,24 @@ body {
     padding-right: 15%;
   }
 
+  .footer {
+    color: #FFFFFF;
+    background-color: #CFB87C;
+    padding-left: 7.25%;
+    padding-right: 15%;
+    float: bottom;
+    clear: bottom;
+  }
+
+  .footer-text {
+    color: #75580B;
+    letter-spacing: 0px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: medium;
+    opacity: 1;
+  }
+
   .card-icon {
     display: block;
     margin-left: auto;
@@ -69,7 +87,7 @@ body {
     display: grid;
     place-items: center;
     padding-top: 5.5%;
-
+    padding-bottom: 5%;
   }
 
   .survey-card {
@@ -90,7 +108,7 @@ body {
     display: grid;
     place-items: center;
     padding-top: 5.5%;
-
+    padding-bottom: 5%;
   }
 
   .notification-card {

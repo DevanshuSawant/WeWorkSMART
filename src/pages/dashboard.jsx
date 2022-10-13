@@ -1,6 +1,8 @@
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2.js";
-import Navbar from "../components/Navbar.jsx";
-import DashboardCard from '../components/DashboardCard.jsx';
+import Navbar from "../components/navbar.jsx";
+import DashboardCard from '../components/dashboard-card.jsx';
+import Footer from "../components/footer.jsx";
+
 
 function Dashboard() {
     return (
@@ -22,6 +24,7 @@ function Dashboard() {
                     </Grid2>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }

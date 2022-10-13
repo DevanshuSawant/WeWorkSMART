@@ -1,8 +1,9 @@
-import Navbar from "../components/Navbar.jsx";
+import Navbar from "../components/navbar.jsx";
 import { Breadcrumbs, Paper } from "@mui/material";
 import { Link } from 'react-router-dom';
 import NotificationCard from "../components/list-card.jsx";
 import { Divider } from "@mui/material";
+import Footer from "../components/footer.jsx";
 
 
 function NotificationList() {
@@ -44,6 +45,7 @@ function NotificationList() {
           </Paper>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
