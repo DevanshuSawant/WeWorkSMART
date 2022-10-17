@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
-  createBrowserRouter,
-  RouterProvider,
+  BrowserRouter,
+  Route,
+  Routes,
 } from "react-router-dom";
 
 import ErrorPage from "./pages/error-page.jsx";
@@ -12,31 +13,33 @@ import SurveyList from "./pages/survey-list.jsx";
 import Login from "./pages/login";
 import "./styles.css";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Dashboard/>,
-    errorElement: <ErrorPage/>,
-  },
-  {
-    path: "/survey-list",
-    element: <SurveyList/>,
-    errorElement: <ErrorPage/>,
-  },
-  {
-    path: "/login",
-    element: <Login/>,
-    errorElement: <ErrorPage/>,
-  },
-  {
-    path: "/notification-list",
-    element: <NotificationList/>,
-    errorElement: <ErrorPage/>,
-  },
-]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter
+      basename="/WeWorkSMART/">
+        <Routes>
+          <Route 
+            path="/" 
+            element={<Dashboard/>}
+            errorElement={<ErrorPage/>}
+          />
+          <Route
+            path="/survey-list"
+            element={<SurveyList/>}
+            errorElement={<ErrorPage/>}
+          />
+          <Route
+            path="/login"
+            element={<Login/>}
+            errorElement={<ErrorPage/>}
+          />
+          <Route
+            path="/notification-list"
+            element={<NotificationList/>}
+            errorElement={<ErrorPage/>}
+          />
+        </Routes>
+      </BrowserRouter>
   </React.StrictMode>
 );

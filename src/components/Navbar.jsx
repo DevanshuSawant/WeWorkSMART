@@ -12,7 +12,7 @@ export default function Navbar() {
       <AppBar position="static">
         <Toolbar className="navbar">
           <Link to="/">
-            <Box component="img" sx={{width: '237px', height: '48px',}} src="/logo2@2x.png" />
+            <Box component="img" sx={{width: '237px', height: '48px',}} alt="WeWorkSMART Logo" src="WeWorkSMART/logo2@2x.png" />
           </Link>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
           <Link to="/login" style={{ textDecoration: 'none' }}>
