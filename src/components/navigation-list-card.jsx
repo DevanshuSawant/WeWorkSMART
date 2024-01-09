@@ -19,11 +19,11 @@ export default function NotificationCard({ to, name, reason, created, status, id
     return (
         <Grid2 item className="notification-card" key={id}>
             <img src="WeWorkSMART/Delete_icon.svg" alt="Delete" width="47px" height="47px" className="notification-card-icon" />
-            <h4 className="notification-data-texth1">{name}</h4>
-            <h5 className="notification-data-texth2">{reason}</h5>
-            <h6 className="notification-header-text">For:</h6><h6 className="notification-data-text">{to}</h6>
-            <h6 className="notification-header-text">Created:</h6><h6 className="notification-data-text">{created}</h6>
-            <h6 className="notification-header-text">Status:</h6><h6 className="notification-data-text">{status}</h6>
+            <h1 className="notification-data-texth1">{name}</h1>
+            <h3 className="notification-data-texth2">{reason}</h3>
+            <h3 className="notification-header-text">For:</h3><h3 className="notification-data-text">{to}</h3>
+            <h3 className="notification-header-text">Created:</h3><h3 className="notification-data-text">{created}</h3>
+            <h3 className="notification-header-text">Status:</h3><h3 className="notification-data-text">{status}</h3>
             <Divider className="notification-divider" />
         </Grid2>
     );

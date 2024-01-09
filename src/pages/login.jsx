@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -7,10 +6,12 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from '../utils/theme.jsx';
+import { Navigate } from 'react-router-dom';
+
 
 function Copyright(props) {
   return (
@@ -25,16 +26,10 @@ function Copyright(props) {
   );
 }
 
-const theme = createTheme();
-
 export default function SignIn() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+  const handleSubmit = () => {
+    localStorage.setItem('auth',true);
+    <Navigate to="/" />
   };
 
   return (
@@ -80,6 +75,7 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              
             >
               Sign In
             </Button>
@@ -102,3 +98,5 @@ export default function SignIn() {
     </ThemeProvider>
   );
 }
+
+export var auth

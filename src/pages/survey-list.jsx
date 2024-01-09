@@ -1,11 +1,11 @@
-import Navbar from "../components/navbar.jsx";
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import { Link } from "react-router-dom";
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
-import Footer from "../components/footer.jsx";
-import surveyData from "../utils/survey-data.jsx";
+import {surveyData} from "../utils/survey-data.jsx";
+import Navbar from '../components/navbar.jsx';
+import Footer from '../components/footer.jsx';
 
 
 const columns = [

@@ -1,11 +1,11 @@
-import Navbar from "../components/navbar.jsx";
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Paper from '@mui/material/Paper';
 import { Link } from 'react-router-dom';
 import NotificationCard from "../components/navigation-list-card.jsx";
 import Divider from '@mui/material/Divider';
-import Footer from "../components/footer.jsx";
 import {notificationData} from "../utils/notification-data.jsx";
+import Navbar from '../components/navbar.jsx';
+import Footer from '../components/footer.jsx';
 
 
 function NotificationList() {
@@ -40,7 +40,6 @@ function NotificationList() {
           </div>
         </div>
       </div>
-      
       <Footer />
     </>
   );

@@ -1,33 +1,33 @@
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2.js";
-import Navbar from "../components/navbar.jsx";
 import DashboardCard from '../components/dashboard-card.jsx';
-import Footer from "../components/footer.jsx";
 import {dashboardData} from "../utils/dashboard-data.jsx";
-import Container from "@mui/material/Container";
+import { ThemeProvider } from "@mui/material/styles";
+import {theme} from "../utils/theme.jsx";
+import Navbar from "../components/navbar.jsx";
+import Footer from "../components/footer.jsx";
 
 
 function Dashboard() {
     const dashboardItems = dashboardData.map(dashboard =>
-        <DashboardCard 
-            id={dashboard.id}
-            text={dashboard.text}
-            link={dashboard.link}
-            icon={{ src: dashboard.icon.src, alt: dashboard.icon.alt  }}
-        />
+        <div className="grid-item" >                    
+            <DashboardCard 
+                id={dashboard.id}
+                text={dashboard.text}
+                link={dashboard.link}
+                icon={{ src: dashboard.icon.src, alt: dashboard.icon.alt  }}
+            />
+        </div>
     );
 
     return (
-        <>
+        <ThemeProvider theme={theme}>
             <Navbar />
-            <Container maxWidth={false} >
+            <div className="grid-container-container">
                 <div class="grid-container">
-                    <Grid2 container rowSpacing={2} className="grid-item" columnSpacing={{ xs: 1 }}>
-                        {dashboardItems}
-                    </Grid2>
+                    {dashboardItems}
                 </div>
-            </Container>
-            <Footer/>
-        </>
+            </div>
+            <Footer />
+        </ThemeProvider>
     );
 }
 

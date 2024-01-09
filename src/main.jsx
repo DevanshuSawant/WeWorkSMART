@@ -12,6 +12,7 @@ import NotificationList from "./pages/notification-list.jsx";
 import SurveyList from "./pages/survey-list.jsx";
 import Login from "./pages/login";
 import "./styles.css";
+import PrivateRoutes from "./utils/private-routes.jsx";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter
       basename="/WeWorkSMART/">
         <Routes>
+        <Route element={<PrivateRoutes/>}>
           <Route 
             path="/" 
             element={<Dashboard/>}
@@ -30,15 +32,17 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             errorElement={<ErrorPage/>}
           />
           <Route
-            path="/login"
-            element={<Login/>}
-            errorElement={<ErrorPage/>}
-          />
-          <Route
             path="/notification-list"
             element={<NotificationList/>}
             errorElement={<ErrorPage/>}
           />
+        </Route>    
+        <Route
+          path="/login"
+          element={<Login/>}
+          errorElement={<ErrorPage/>}
+        />
+        
         </Routes>
       </BrowserRouter>
   </React.StrictMode>
